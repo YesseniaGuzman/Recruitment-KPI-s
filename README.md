@@ -1,19 +1,7 @@
-# Recruitment KPI dashboard
+# Recruitment metrics
 
-[Open the live dashboard](https://yesseniaguzman.github.io/Recruitment-KPI-s/)
+Private management dashboard based on Historical Recruitmet Records 2026.xlsx, Recruitment rows 3–35. A static historical snapshot; not connected to the workbook.
 
-The dashboard reuses the existing `Recruitment_KPI_Report_Updated.html` report, including its 2026 recruitment data, filters, charts, and print option.
+Completed records use posting-to-completion calendar days as a time-to-fill proxy. Removed and On Hold records are excluded from this metric. Posting episodes, not unique requisition IDs or individual hires, are counted. Recorded sponsorship amounts are incomplete and not verified invoices.
 
-## Files
-
-- `index.html` — dashboard homepage served at the root GitHub Pages URL.
-- `Recruitment_KPI_Report_Updated.html` — original report, retained at its existing URL.
-- `.nojekyll` — serves these files directly as a static site.
-
-The report is self-contained: its styles, scripts, and data are embedded in the HTML. It requires no build step, package installation, server, or external chart library.
-
-## GitHub Pages
-
-In **Settings → Pages**, use **Deploy from a branch**, **main**, and **/(root)**. Updates to the publishing branch are deployed by GitHub Pages.
-
-For future report updates, replace `index.html` with the updated report. Keep the original filename in sync if you also want its direct link to show the latest report. The data is a historical snapshot; it does not synchronize automatically with a recruitment system.
+Serve the dist directory using a local HTTP server. No build step or external dependencies are required.
